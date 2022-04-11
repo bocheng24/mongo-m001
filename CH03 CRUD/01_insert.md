@@ -3,6 +3,7 @@
 1. Connect to the mongo server
 2. Switch to the database
 3. perform insert
+
     db.<collection_name>.insert( {JSON} )
 
 ## The value of _id
