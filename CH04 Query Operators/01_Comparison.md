@@ -1,4 +1,4 @@
-## Basic comparison operators
+## Basic Comparison Operators
 
 * $eq: =
 * $ne: != or <>
@@ -7,7 +7,7 @@
 * $gte: >=
 * $lte: <=
 
-## Filter syntax
+## Filter Syntax
 
     db.<collection_name>.filter(
         {
