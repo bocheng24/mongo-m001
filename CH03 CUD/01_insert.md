@@ -7,14 +7,14 @@
 ## Perform Insert
 
 ### A. Insert one document
-    db.<collection_name>.insert( {JSON} )
+    db.<collection_name>.insert( { JSON } )
 
 ### B. Insert multiple documents
-    db.<collection_name>.insert( [{JSON}, {JSON}, ...] )
+    db.<collection_name>.insert( [ { JSON }, { JSON }, ... ] )
 
 ### C. If the data list has duplicated _id data, use {"ordered": false} to insert multiple documents to insert 
     b.<collection_name>.insert( 
-        [{JSON}, {JSON}, ...],
+        [{ JSON }, { JSON }, ...],
         {"ordered": false}
     )
 
