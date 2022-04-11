@@ -1,5 +1,5 @@
 ## Mongo URI Format
-mongodb+srv://user:password/mongodb_server/dbname
+    mongodb+srv://user:password/mongodb_server/dbname
 
 ## Export mongo data as BSON
 mongodump --uri <mongo_uri>
