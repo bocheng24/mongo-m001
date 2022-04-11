@@ -18,7 +18,7 @@
         {"ordered": false}
     )
 
-### C. Mongo will auto create <collection_name> if not exists
+### D. Mongo will auto create <collection_name> if not exists
 
 ## The value of _id
 
