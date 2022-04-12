@@ -71,4 +71,54 @@ How many businesses in the sample_training.inspections dataset have the inspecti
 ### Result
     4
 
+## Lab 1
+
+How many zips in the sample_training.zips dataset are neither over-populated nor under-populated?
+In this case, we consider population of more than 1,000,000 to be over- populated and less than 5,000 to be under-populated.
+
+### Solution
+
+    db.zips.find(
+        {
+            "$nor": [
+                {"pop": { "$gt": 1000000 }},
+                {"pop": { "$lt": 5000 }}
+            ]
+        }
+    ).count()
     
+### Result
+    11193
+
+## Lab 2
+
+How many companies in the sample_training.companies dataset were
+
+* either founded in 2004
+* [and] either have the social category_code [or] web category_code 
+* [or] were founded in the month of October
+* [and] also either have the social category_code [or] web category_code?
+
+### Solution
+    db.companies.find(
+        {
+            "$or": [
+                {
+                    "$and": [
+                        {"founded_year": 2004},
+                        {"$or": [{"category_code": "web"}, {"category_code": "social"}]}
+                    ]
+                },
+
+                {
+                    "$and": [
+                        {"founded_month": 10},
+                        {"$or": [{"category_code": "web"}, {"category_code": "social"}]}
+                    ]
+                }
+            ]
+        }
+    ).count()
+
+### Result
+    149
