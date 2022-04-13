@@ -16,7 +16,7 @@ Apples to $and, $or, $nor
         }
     )
 
-### Non Array Syntax
+### None Array Syntax
 Applies to $not
 
     db.<collection_name>.find(
